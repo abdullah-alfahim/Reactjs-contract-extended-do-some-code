@@ -1,42 +1,95 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    background-color: #002fff0c;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body{
+    font-family: 'Poppins', sans-serif; 
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.inner_header{
+    width: 95vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.card {
-  padding: 2em;
+
+.show_data a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    border: 1px solid black;
+    padding: 5px 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.show_data a:hover{
+    color: #ffffff;
+    background-color: black;
+}
+
+
+.body{
+    margin-top: 10vh;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.inner_body{
+    width: 85vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+    flex-direction: column;
+}
+
+
+.text_area{
+    width: 85vw;
+    height: 25vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;  
+    flex-direction: column;
+}
+
+
+.text_area h1{
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.text_area p{
+    font-size: 18px;
+    color: #323232;
+}
+
+
+.main_area{
+    width: 85vw;
+    height: 55vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    flex-direction: column;
 }
