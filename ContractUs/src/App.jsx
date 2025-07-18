@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Body from './components/Body'
 
 import logo from "./assets/logo.png"
-
+import image from "./assets/main_banner.png"
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <Header logo={logo}/>
-      <Body/>
+      <Body image={image}/>
     </div>
   )
 }
