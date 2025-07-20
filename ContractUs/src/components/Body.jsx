@@ -1,6 +1,15 @@
 import React from 'react'
 
-export default function Body({image}) {
+export default function Body(props) {
+
+    function add(formData) {
+        const email = formData.get('email')
+        const name = formData.get('name')
+        const message = formData.get('message')
+
+        props.add(prevData => [...prevData, {email, name, message}])
+    }
+
   return (
     <div className="body">
         <div className="inner_body">
@@ -20,16 +29,16 @@ export default function Body({image}) {
                         </div>
                     </div>
                     <div className="form">
-                        <form action="">
-                            <input type="email" placeholder='Email' />
-                            <input type="text" placeholder='Name' />
-                            <textarea  name="" id="" cols="30" rows="10"></textarea>
-                            <button  type="submit">Submit</button>
+                        <form action={add} >
+                            <input name="email" type="email" placeholder='Email' />
+                            <input name="name" type="text" placeholder='Name' />
+                            <textarea name="message" id="" cols="30" rows="10"></textarea>
+                            <button type="submit">Submit</button>
                         </form>
                     </div>
                 </div>
                 <div className="image_area">
-                    <img src={image} alt="" />
+                    <img src={props.image} alt="" />
                 </div>
             </div>
         </div>
