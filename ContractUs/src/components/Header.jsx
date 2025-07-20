@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 
 export default function Header({logo}) {
@@ -9,7 +10,7 @@ export default function Header({logo}) {
                 <img src={logo} alt="" />
             </div>
             <div className="show_data">
-                <a href="#">Show Data</a>
+                <Link to="/view">Show Data</Link>
             </div>
         </div>
     </div>

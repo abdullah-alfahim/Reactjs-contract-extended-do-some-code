@@ -1,13 +1,17 @@
 import React from 'react'
+import { useOutletContext } from 'react-router'
 
-export default function Body(props) {
+export default function Body() {
+    const {setData, image } = useOutletContext()
 
     function add(formData) {
         const email = formData.get('email')
         const name = formData.get('name')
         const message = formData.get('message')
 
-        props.add(prevData => [...prevData, {email, name, message}])
+        if(email && name && message){
+            setData(prevData => [...prevData, {email, name, message}])
+        }
     }
 
   return (
@@ -38,7 +42,7 @@ export default function Body(props) {
                     </div>
                 </div>
                 <div className="image_area">
-                    <img src={props.image} alt="" />
+                    <img src={image} alt="" />
                 </div>
             </div>
         </div>

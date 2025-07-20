@@ -1,29 +1,26 @@
 import './App.css'
 import Header from './components/Header'
 import Body from './components/Body'
+import View from './components/View'
 
 import logo from "./assets/logo.png"
 import image from "./assets/main_banner.png"
 
 import { useState } from 'react'
-
+import { Outlet } from 'react-router'
 
 function App() {
 
-  const [data, setData] = useState([{
-    name: "",
-    email: "",
-    message: "",
-  }])
+  const [data, setData] = useState([ ])
 
   
 
-  
+
 
   return (
     <div>
       <Header logo={logo}/>
-      <Body image={image} add={setData}/>
+      <Outlet context={{ data, setData, image }}/>
     </div>
   )
 }
